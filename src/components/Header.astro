@@ -12,12 +12,31 @@
       
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text">Home</a>
-        <a href="#services" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text">Services</a>
-        <a href="#technologies" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text">Technologies</a>
-        <a href="#portfolio" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text">Portfolio</a>
-        <a href="#about" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text">About</a>
-        <a href="#contact" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text">Contact</a>
+        <a href="/" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text navbar-link">Home</a>
+        
+        <!-- Services Dropdown -->
+        <div class="relative group">
+          <button class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text navbar-link flex items-center space-x-1">
+            <span>Services</span>
+            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <div class="py-2">
+              <a href="/services/website-development" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Website Development</a>
+              <a href="/services/mobile-app-development" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Mobile App Development</a>
+              <a href="/services/custom-software" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Custom Software</a>
+              <a href="/services/digital-marketing" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Digital Marketing</a>
+              <a href="/services/seo-optimization" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">SEO Optimization</a>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#technologies" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text navbar-link">Technologies</a>
+        <a href="/portfolio" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text navbar-link">Portfolio</a>
+        <a href="#about" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text navbar-link">About</a>
+        <a href="#contact" class="text-white/90 hover:text-white font-medium transition-colors duration-200 navbar-text navbar-link">Contact</a>
       </div>
 
       <!-- Contact Button -->
@@ -39,9 +58,26 @@
     <div class="md:hidden mt-4 hidden" id="mobile-menu">
       <div class="flex flex-col space-y-4 bg-black/50 backdrop-blur-lg rounded-lg p-4">
         <a href="/" class="text-white/90 hover:text-white font-medium transition duration-300">Home</a>
-        <a href="#services" class="text-white/90 hover:text-white font-medium transition duration-300">Services</a>
+        
+        <!-- Mobile Services Dropdown -->
+        <div class="relative">
+          <button class="text-white/90 hover:text-white font-medium transition duration-300 flex items-center justify-between w-full" id="mobile-services-toggle">
+            <span>Services</span>
+            <svg class="w-4 h-4 transition-transform duration-200" id="mobile-services-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="hidden mt-2 ml-4 space-y-2" id="mobile-services-dropdown">
+            <a href="/services/website-development" class="block text-white/80 hover:text-white text-sm transition duration-300">Website Development</a>
+            <a href="/services/mobile-app-development" class="block text-white/80 hover:text-white text-sm transition duration-300">Mobile App Development</a>
+            <a href="/services/custom-software" class="block text-white/80 hover:text-white text-sm transition duration-300">Custom Software</a>
+            <a href="/services/digital-marketing" class="block text-white/80 hover:text-white text-sm transition duration-300">Digital Marketing</a>
+            <a href="/services/seo-optimization" class="block text-white/80 hover:text-white text-sm transition duration-300">SEO Optimization</a>
+          </div>
+        </div>
+        
         <a href="#technologies" class="text-white/90 hover:text-white font-medium transition duration-300">Technologies</a>
-        <a href="#portfolio" class="text-white/90 hover:text-white font-medium transition duration-300">Portfolio</a>
+        <a href="/portfolio" class="text-white/90 hover:text-white font-medium transition duration-300">Portfolio</a>
         <a href="#about" class="text-white/90 hover:text-white font-medium transition duration-300">About</a>
         <a href="#contact" class="text-white/90 hover:text-white font-medium transition duration-300">Contact</a>
       </div>
@@ -50,22 +86,29 @@
 </header>
 
 <script>
-  // Navbar scroll effect - keeping transparent background as requested
+  // Navbar scroll effect - transparent with no background
   function handleNavbarScroll() {
     const navbar = document.getElementById('navbar');
     const navbarTexts = document.querySelectorAll('.navbar-text');
+    const navbarLinks = document.querySelectorAll('.navbar-link');
     if (!navbar) return;
     
     if (window.scrollY > 50) {
-      // Add stronger backdrop blur but keep transparent
-      navbar.classList.add('backdrop-blur-lg', 'bg-white/10');
-      // Change text color to dark when scrolling over light sections
+      // Add backdrop blur but no background color
+      navbar.classList.add('backdrop-blur-md');
+      navbar.classList.remove('bg-white/10');
+      // Change text color to black when scrolling
       navbarTexts.forEach(text => {
         text.classList.remove('text-white', 'text-white/90');
         text.classList.add('text-gray-900');
       });
+      // Update hover states for links - lime green hover
+      navbarLinks.forEach(link => {
+        link.classList.remove('hover:text-white');
+        link.classList.add('hover:text-primary-400');
+      });
     } else {
-      navbar.classList.remove('backdrop-blur-lg', 'bg-white/10');
+      navbar.classList.remove('backdrop-blur-md');
       // Keep white text in hero section
       navbarTexts.forEach(text => {
         text.classList.remove('text-gray-900');
@@ -74,6 +117,11 @@
         } else {
           text.classList.add('text-white/90');
         }
+      });
+      // Reset hover states for links - lime green hover
+      navbarLinks.forEach(link => {
+        link.classList.remove('hover:text-white');
+        link.classList.add('hover:text-primary-400');
       });
     }
   }
@@ -99,6 +147,18 @@
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Mobile services dropdown
+    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+    const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+    const mobileServicesArrow = document.getElementById('mobile-services-arrow');
+    
+    if (mobileServicesToggle && mobileServicesDropdown && mobileServicesArrow) {
+      mobileServicesToggle.addEventListener('click', function() {
+        mobileServicesDropdown.classList.toggle('hidden');
+        mobileServicesArrow.classList.toggle('rotate-180');
       });
     }
   });

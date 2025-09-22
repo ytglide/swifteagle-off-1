@@ -5,16 +5,16 @@ export default {
       extend: {
         colors: {
           primary: {
-            50: '#f0fdf9',
-            100: '#ccfbf1',
-            200: '#99f6e4',
-            300: '#5eead4',
-            400: '#2dd4bf',
-            500: '#2A9D8F', // Brand green
-            600: '#0f766e',
-            700: '#0d9488',
-            800: '#115e59',
-            900: '#134e4a',
+            50: '#fefff0',
+            100: '#fcffe0',
+            200: '#f7ffc2',
+            300: '#eeff8d',
+            400: '#c4f82a', // Brand green - more visible lime green
+            500: '#a3e635',
+            600: '#84cc16',
+            700: '#65a30d',
+            800: '#4d7c0f',
+            900: '#365314',
           },
           dark: {
             primary: '#0B1426', // Deep cosmic blue

@@ -8,7 +8,7 @@ export function WorldMapDemo() {
     <div className="w-full">
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
-          Global <span className="text-transparent bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text">Connectivity</span>
+          Global <span className="gradient-text">Connectivity</span>
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           We work with clients from place to place, delivering exceptional digital solutions.

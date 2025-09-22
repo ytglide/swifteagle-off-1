@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Portfolio - SwiftEagle Technology | Our Best Projects & Case Studies">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-transparent to-primary-900/20"></div>
+    
+    <div class="relative z-10 container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 animate-slide-in-up">
+        Our <span class="text-primary-400">Portfolio</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed animate-slide-in-up" style="animation-delay: 0.2s;">
+        Explore our collection of successful projects and digital solutions that have transformed businesses worldwide.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="py-32 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-20 scroll-animate">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Discover how we've helped businesses achieve their digital transformation goals through innovative solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Project 1: Construction Website -->
+        <div class="portfolio-card group scroll-animate" style="animation-delay: 0.1s;">
+          <div class="portfolio-3d-container">
+            <div class="portfolio-3d-card">
+              <div class="portfolio-front">
+                <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-600 rounded-lg overflow-hidden relative">
+                  <iframe 
+                    src="https://construction-9uh.pages.dev/" 
+                    class="w-full h-full border-0 scale-75 origin-top-left transform"
+                    loading="lazy"
+                    title="Construction Website Preview">
+                  </iframe>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">Construction Company</h3>
+                    <p class="text-sm opacity-90">Modern Construction Website</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-back">
+                <div class="p-6 bg-white rounded-lg shadow-lg h-full flex flex-col justify-center">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Construction Website</h3>
+                  <p class="text-gray-600 mb-4">A modern, responsive website for a construction company featuring project showcases, service listings, and client testimonials.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">HTML/CSS</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Responsive</span>
+                  </div>
+                  <a href="https://construction-9uh.pages.dev/" target="_blank" class="btn-primary inline-block text-center">
+                    View Live Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: YTGlide -->
+        <div class="portfolio-card group scroll-animate" style="animation-delay: 0.2s;">
+          <div class="portfolio-3d-container">
+            <div class="portfolio-3d-card">
+              <div class="portfolio-front">
+                <div class="aspect-video bg-gradient-to-br from-red-500 to-pink-600 rounded-lg overflow-hidden relative">
+                  <iframe 
+                    src="https://ytglide.com/" 
+                    class="w-full h-full border-0 scale-75 origin-top-left transform"
+                    loading="lazy"
+                    title="YTGlide Preview">
+                  </iframe>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">YTGlide</h3>
+                    <p class="text-sm opacity-90">YouTube Analytics Platform</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-back">
+                <div class="p-6 bg-white rounded-lg shadow-lg h-full flex flex-col justify-center">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">YTGlide Platform</h3>
+                  <p class="text-gray-600 mb-4">A comprehensive YouTube analytics and management platform helping content creators optimize their channels and grow their audience.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">React</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Node.js</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Analytics</span>
+                  </div>
+                  <a href="https://ytglide.com/" target="_blank" class="btn-primary inline-block text-center">
+                    View Live Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Kalki Service -->
+        <div class="portfolio-card group scroll-animate" style="animation-delay: 0.3s;">
+          <div class="portfolio-3d-container">
+            <div class="portfolio-3d-card">
+              <div class="portfolio-front">
+                <div class="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg overflow-hidden relative">
+                  <iframe 
+                    src="https://kalkiservice.com/" 
+                    class="w-full h-full border-0 scale-75 origin-top-left transform"
+                    loading="lazy"
+                    title="Kalki Service Preview">
+                  </iframe>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">Kalki Service</h3>
+                    <p class="text-sm opacity-90">Service Management Platform</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-back">
+                <div class="p-6 bg-white rounded-lg shadow-lg h-full flex flex-col justify-center">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Kalki Service Platform</h3>
+                  <p class="text-gray-600 mb-4">A comprehensive service management platform designed to streamline business operations and enhance customer experience.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Vue.js</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Laravel</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">MySQL</span>
+                  </div>
+                  <a href="https://kalkiservice.com/" target="_blank" class="btn-primary inline-block text-center">
+                    View Live Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Tattto -->
+        <div class="portfolio-card group scroll-animate" style="animation-delay: 0.4s;">
+          <div class="portfolio-3d-container">
+            <div class="portfolio-3d-card">
+              <div class="portfolio-front">
+                <div class="aspect-video bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg overflow-hidden relative">
+                  <iframe 
+                    src="https://tattto-final.vercel.app/" 
+                    class="w-full h-full border-0 scale-75 origin-top-left transform"
+                    loading="lazy"
+                    title="Tattto Preview">
+                  </iframe>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">Tattto</h3>
+                    <p class="text-sm opacity-90">Creative Portfolio Platform</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-back">
+                <div class="p-6 bg-white rounded-lg shadow-lg h-full flex flex-col justify-center">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Tattto Creative Platform</h3>
+                  <p class="text-gray-600 mb-4">An innovative creative platform showcasing artistic portfolios with modern design and interactive user experience.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Next.js</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">TypeScript</span>
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 rounded-full text-sm">Vercel</span>
+                  </div>
+                  <a href="https://tattto-final.vercel.app/" target="_blank" class="btn-primary inline-block text-center">
+                    View Live Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <div class="max-w-3xl mx-auto scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
+          Ready to Start Your Project?
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Let's work together to bring your vision to life with cutting-edge technology and innovative design.
+        </p>
+        <a href="#contact" class="btn-primary">
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* 3D Portfolio Card Styles */
+  .portfolio-card {
+    perspective: 1000px;
+    height: 400px;
+  }
+
+  .portfolio-3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .portfolio-card:hover .portfolio-3d-container {
+    transform: rotateY(180deg);
+  }
+
+  .portfolio-3d-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+
+  .portfolio-front,
+  .portfolio-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .portfolio-back {
+    transform: rotateY(180deg);
+  }
+
+  .portfolio-front iframe {
+    pointer-events: none;
+  }
+
+  .portfolio-card:hover .portfolio-front iframe {
+    pointer-events: auto;
+  }
+
+  /* Animation for scroll */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // Scroll Animation Observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-animate elements
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    scrollElements.forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>
