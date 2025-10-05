@@ -1,0 +1,374 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Us - SwiftEagle Technology",
+  "description": "Learn about SwiftEagle Technology, our mission, team, and commitment to delivering exceptional IT solutions.",
+  "url": "https://www.swifteagletechnology.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "SwiftEagle Technology",
+    "description": "Leading IT solutions company delivering custom software development, web applications, and digital transformation services",
+    "foundingDate": "2020",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressCountry": "Nepal"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+977-9705518377",
+      "contactType": "customer service"
+    }
+  }
+};
+---
+
+<Layout 
+  title="About Us - SwiftEagle Technology | Our Story & Mission"
+  description="Learn about SwiftEagle Technology, our mission to deliver exceptional IT solutions, and our commitment to client success in Nepal and beyond."
+  keywords="about us, SwiftEagle Technology, IT company Nepal, software development team, company mission, our story"
+  structuredData={structuredData}
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-900 via-emerald-800 to-teal-700 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/30"></div>
+    
+    <div class="relative z-10 container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 animate-slide-in-up">
+        About <span class="text-emerald-300">SwiftEagle</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed animate-slide-in-up" style="animation-delay: 0.2s;">
+        We are passionate technologists dedicated to transforming businesses through innovative digital solutions.
+      </p>
+      <div class="mt-8 animate-slide-in-up" style="animation-delay: 0.4s;">
+        <a href="#our-story" class="btn-primary mr-4">Our Story</a>
+        <a href="#team" class="btn-secondary">Meet Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section id="our-story" class="py-32 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-20 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
+            Our <span class="gradient-text">Story</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Founded with a vision to bridge the gap between technology and business success.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-animate">
+          <div>
+            <h3 class="text-2xl font-heading font-bold text-gray-900 mb-6">Our Journey</h3>
+            <div class="space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                SwiftEagle Technology was founded in 2020 with a simple yet powerful mission: to help businesses 
+                leverage technology for growth and success. What started as a small team of passionate developers 
+                has grown into a comprehensive IT solutions company serving clients across Nepal and beyond.
+              </p>
+              <p>
+                We believe that technology should be accessible, reliable, and transformative. Our journey has 
+                been marked by continuous learning, innovation, and an unwavering commitment to delivering 
+                exceptional results for our clients.
+              </p>
+              <p>
+                Today, we're proud to be a trusted partner for businesses looking to embrace digital transformation, 
+                from startups taking their first steps online to established enterprises seeking to modernize 
+                their operations.
+              </p>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl p-8 shadow-2xl">
+              <div class="grid grid-cols-2 gap-8 text-center">
+                <div>
+                  <div class="text-4xl font-bold text-primary-600 mb-2">50+</div>
+                  <div class="text-gray-600">Projects Completed</div>
+                </div>
+                <div>
+                  <div class="text-4xl font-bold text-primary-600 mb-2">30+</div>
+                  <div class="text-gray-600">Happy Clients</div>
+                </div>
+                <div>
+                  <div class="text-4xl font-bold text-primary-600 mb-2">5+</div>
+                  <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div>
+                  <div class="text-4xl font-bold text-primary-600 mb-2">100%</div>
+                  <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="py-32 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-20 scroll-animate">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
+          Our Mission & <span class="gradient-text">Values</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          The principles that guide everything we do and every solution we create.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-animate">
+        <!-- Mission -->
+        <div class="service-card text-center group">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Our Mission</h3>
+          <p class="text-gray-600">To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and success in the digital age.</p>
+        </div>
+
+        <!-- Innovation -->
+        <div class="service-card text-center group">
+          <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
+          <p class="text-gray-600">We stay at the forefront of technology, constantly exploring new tools and methodologies to deliver cutting-edge solutions.</p>
+        </div>
+
+        <!-- Quality -->
+        <div class="service-card text-center group">
+          <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Quality</h3>
+          <p class="text-gray-600">We maintain the highest standards in everything we do, from code quality to project delivery and client communication.</p>
+        </div>
+
+        <!-- Partnership -->
+        <div class="service-card text-center group">
+          <div class="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
+          <p class="text-gray-600">We believe in building long-term relationships with our clients, becoming their trusted technology partners.</p>
+        </div>
+
+        <!-- Transparency -->
+        <div class="service-card text-center group">
+          <div class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Transparency</h3>
+          <p class="text-gray-600">We maintain open communication throughout every project, keeping clients informed and involved in the development process.</p>
+        </div>
+
+        <!-- Excellence -->
+        <div class="service-card text-center group">
+          <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-200 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
+          <p class="text-gray-600">We strive for excellence in every project, going above and beyond to exceed client expectations and deliver outstanding results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-32 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-20 scroll-animate">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
+          Meet Our <span class="gradient-text">Team</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          The talented individuals behind SwiftEagle Technology's success.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-animate">
+        <!-- Team Member 1 -->
+        <div class="service-card text-center group">
+          <div class="w-24 h-24 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl font-bold text-primary-600">SM</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Sabin Mainali</h3>
+          <p class="text-primary-600 font-medium mb-3">Founder & CEO</p>
+          <p class="text-gray-600 text-sm">Visionary leader with 3+ years of experience in software development and business strategy.</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="service-card text-center group">
+          <div class="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl font-bold text-blue-600">SK</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Shreegya Gautam</h3>
+          <p class="text-blue-600 font-medium mb-3">Lead Developer</p>
+          <p class="text-gray-600 text-sm">Full-stack developer specializing in React, Node.js, and cloud technologies.</p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="service-card text-center group">
+          <div class="w-24 h-24 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl font-bold text-green-600">RB</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Royal Bhattarai</h3>
+          <p class="text-green-600 font-medium mb-3">UI/UX Designer</p>
+          <p class="text-gray-600 text-sm">Creative designer focused on user experience and modern interface design.</p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="service-card text-center group">
+          <div class="w-24 h-24 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl font-bold text-purple-600">SM</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Saraswoti Mainali</h3>
+          <p class="text-purple-600 font-medium mb-3">Mobile Developer</p>
+          <p class="text-gray-600 text-sm">Expert in React Native and Flutter for cross-platform mobile development.</p>
+        </div>
+
+        <!-- Team Member 5 -->
+        <div class="service-card text-center group">
+          <div class="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl font-bold text-orange-600">YK</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Yubraj Khatiwada</h3>
+          <p class="text-orange-600 font-medium mb-3">DevOps Engineer</p>
+          <p class="text-gray-600 text-sm">Specialist in cloud infrastructure, CI/CD, and deployment automation.</p>
+        </div>
+
+        <!-- Team Member 6 -->
+        <div class="service-card text-center group">
+          <div class="w-24 h-24 bg-gradient-to-br from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span class="text-2xl font-bold text-red-600">MG</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Manoj Gurung</h3>
+          <p class="text-red-600 font-medium mb-3">QA Engineer</p>
+          <p class="text-gray-600 text-sm">Quality assurance specialist ensuring robust and reliable software delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-32 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-20 scroll-animate">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6">
+          Why Choose <span class="gradient-text">SwiftEagle</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          What sets us apart in the competitive world of technology services.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 scroll-animate">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Proven Track Record</h3>
+          <p class="text-gray-600 text-sm">50+ successful projects delivered on time and within budget.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Quality Assurance</h3>
+          <p class="text-gray-600 text-sm">Rigorous testing and quality control processes for every project.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Expert Team</h3>
+          <p class="text-gray-600 text-sm">Experienced developers and designers with diverse skill sets.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .994-.16 1.948-.461 2.827l-2.12-2.12a4 4 0 01-5.418-5.418l-2.12-2.12A8 8 0 0116 10z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">24/7 Support</h3>
+          <p class="text-gray-600 text-sm">Round-the-clock support and maintenance for all our solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-emerald-600">
+    <div class="container mx-auto px-6 text-center">
+      <div class="max-w-3xl mx-auto scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
+          Ready to Work with Us?
+        </h2>
+        <p class="text-lg text-emerald-100 mb-8">
+          Let's discuss your project and see how we can help bring your vision to life.
+        </p>
+        <a href="/contact" class="btn-primary bg-white text-emerald-600 hover:bg-gray-100">
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  // Scroll Animation Observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    scrollElements.forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>

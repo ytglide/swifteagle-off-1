@@ -1,9 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO Optimization Services",
+  "description": "Improve your search engine rankings and drive organic traffic with our proven SEO strategies.",
+  "provider": {
+    "@type": "Organization",
+    "name": "SwiftEagle Technology",
+    "url": "https://www.swifteagletechnology.com"
+  },
+  "areaServed": "Nepal",
+  "serviceType": "SEO Optimization",
+  "offers": {
+    "@type": "Offer",
+    "description": "Keyword research, on-page optimization, technical SEO, content optimization, link building, and SEO analytics"
+  }
+};
 ---
 
-<Layout title="SEO Optimization Services - SwiftEagle Technology | Rank Higher on Google">
+<Layout 
+  title="SEO Optimization Services - SwiftEagle Technology | Rank Higher on Google"
+  description="Improve your search engine rankings and drive organic traffic with our proven SEO strategies. Keyword research, technical SEO, content optimization."
+  keywords="SEO optimization, search engine optimization, keyword research, technical SEO, content optimization, link building, Nepal"
+  structuredData={structuredData}
+>
   <Header />
   
   <!-- Hero Section -->
@@ -167,6 +191,8 @@ import Header from '../../components/Header.astro';
       </div>
     </div>
   </section>
+
+  <Footer />
 </Layout>
 
 <script>

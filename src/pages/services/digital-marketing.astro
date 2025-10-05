@@ -1,9 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing Services",
+  "description": "Boost your online presence and drive business growth with our comprehensive digital marketing strategies.",
+  "provider": {
+    "@type": "Organization",
+    "name": "SwiftEagle Technology",
+    "url": "https://www.swifteagletechnology.com"
+  },
+  "areaServed": "Nepal",
+  "serviceType": "Digital Marketing",
+  "offers": {
+    "@type": "Offer",
+    "description": "Social media marketing, PPC campaigns, content marketing, email marketing, influencer marketing, and analytics"
+  }
+};
 ---
 
-<Layout title="Digital Marketing Services - SwiftEagle Technology | Grow Your Online Presence">
+<Layout 
+  title="Digital Marketing Services - SwiftEagle Technology | Grow Your Online Presence"
+  description="Boost your online presence and drive business growth with our comprehensive digital marketing strategies. Social media marketing, PPC campaigns, content marketing."
+  keywords="digital marketing, social media marketing, PPC campaigns, content marketing, email marketing, online advertising, Nepal"
+  structuredData={structuredData}
+>
   <Header />
   
   <!-- Hero Section -->
@@ -122,6 +146,8 @@ import Header from '../../components/Header.astro';
       </div>
     </div>
   </section>
+
+  <Footer />
 </Layout>
 
 <script>

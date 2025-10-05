@@ -1,9 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Mobile App Development Services",
+  "description": "Build powerful, user-friendly mobile applications for iOS and Android that engage users and drive business success.",
+  "provider": {
+    "@type": "Organization",
+    "name": "SwiftEagle Technology",
+    "url": "https://www.swifteagletechnology.com"
+  },
+  "areaServed": "Nepal",
+  "serviceType": "Mobile App Development",
+  "offers": {
+    "@type": "Offer",
+    "description": "Native iOS and Android development, cross-platform solutions, mobile UI/UX design, app store optimization, and maintenance"
+  }
+};
 ---
 
-<Layout title="Mobile App Development Services - SwiftEagle Technology | iOS & Android Apps">
+<Layout 
+  title="Mobile App Development Services - SwiftEagle Technology | iOS & Android Apps"
+  description="Build powerful, user-friendly mobile applications for iOS and Android that engage users and drive business success. Native and cross-platform development solutions."
+  keywords="mobile app development, iOS apps, Android apps, React Native, Flutter, mobile UI/UX design, app store optimization, Nepal"
+  structuredData={structuredData}
+>
   <Header />
   
   <!-- Hero Section -->
@@ -210,6 +234,8 @@ import Header from '../../components/Header.astro';
       </div>
     </div>
   </section>
+
+  <Footer />
 </Layout>
 
 <script>

@@ -4,21 +4,96 @@ import '../styles/global.css';
 export interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: any;
 }
 
-const { title, description = "SwiftEagle Technology - Transform Your Vision Into Digital Reality" } = Astro.props;
+const { 
+  title, 
+  description = "SwiftEagle Technology - Transform Your Vision Into Digital Reality", 
+  keywords = "web development, mobile apps, software development, IT solutions, Nepal, custom software, digital marketing, SEO",
+  canonical = Astro.url.href,
+  ogImage = "/images/logo.png",
+  structuredData
+} = Astro.props;
+
+const defaultStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SwiftEagle Technology",
+  "description": "Leading IT solutions company delivering custom software development, web applications, and digital transformation services",
+  "url": "https://www.swifteagletechnology.com",
+  "logo": "https://www.swifteagletechnology.com/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+977-9705518377",
+    "contactType": "customer service",
+    "areaServed": "Nepal",
+    "availableLanguage": "English"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kathmandu",
+    "addressCountry": "Nepal"
+  },
+  "sameAs": [
+    "https://www.facebook.com/swifteagletechnology",
+    "https://www.linkedin.com/company/swifteagle-technology",
+    "https://www.twitter.com/swifteagle"
+  ]
+};
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="web development, mobile apps, software development, IT solutions, Nepal" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="author" content="SwiftEagle Technology" />
-      <link rel="icon" type="image/png" href="/images/logo.png" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="SwiftEagle Technology" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Title -->
     <title>{title}</title>
+    
+    <!-- Structured Data -->
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+    {!structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(defaultStructuredData)} />
+    )}
   </head>
   <body class="min-h-screen bg-white">
     <slot />

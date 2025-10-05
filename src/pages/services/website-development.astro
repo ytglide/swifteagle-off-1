@@ -1,9 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website Development Services",
+  "description": "Create stunning, responsive websites that engage your audience and drive business growth with our expert development team.",
+  "provider": {
+    "@type": "Organization",
+    "name": "SwiftEagle Technology",
+    "url": "https://www.swifteagletechnology.com"
+  },
+  "areaServed": "Nepal",
+  "serviceType": "Web Development",
+  "offers": {
+    "@type": "Offer",
+    "description": "Custom web development, responsive design, e-commerce solutions, CMS development, performance optimization, and maintenance support"
+  }
+};
 ---
 
-<Layout title="Website Development Services - SwiftEagle Technology | Custom Web Solutions">
+<Layout 
+  title="Website Development Services - SwiftEagle Technology | Custom Web Solutions"
+  description="Create stunning, responsive websites that engage your audience and drive business growth with our expert development team. Custom web development, e-commerce solutions, CMS development."
+  keywords="website development, web design, responsive websites, e-commerce development, CMS development, custom web solutions, Nepal"
+  structuredData={structuredData}
+>
   <Header />
   
   <!-- Hero Section -->
@@ -214,6 +238,8 @@ import Header from '../../components/Header.astro';
       </div>
     </div>
   </section>
+
+  <Footer />
 </Layout>
 
 <script>
